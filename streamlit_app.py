@@ -59,8 +59,6 @@ except URLError as e:
 # output the screen as a table
 #streamlit.dataframe(fruityvice_normalized)
 
-streamlit.stop()
-
 #my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 #my_cur = my_cnx.cursor()
 #my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
@@ -102,4 +100,4 @@ if streamlit.button('Add a Fruit to the List'):
   back_from_function = insert_row_snowflake(add_my_fruit)
   streamlit.text(back_from_function)
 
-
+streamlit.stop()
